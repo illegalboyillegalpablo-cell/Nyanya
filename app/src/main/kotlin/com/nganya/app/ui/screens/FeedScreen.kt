@@ -6,7 +6,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
@@ -18,23 +17,22 @@ fun FeedScreen() {
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         items(10) { index ->
-            FeedCard(index)
+            FeedItem(index)
         }
     }
 }
 
 @Composable
-fun FeedCard(index: Int) {
+fun FeedItem(index: Int) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(300.dp)
-            .padding(8.dp),
+            .height(200.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Post #${index + 1}",
-            fontSize = 24.sp
+            text = "Feed Post #$index",
+            fontSize = 18.sp
         )
     }
 }

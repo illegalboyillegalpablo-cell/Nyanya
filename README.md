@@ -1,148 +1,179 @@
-# NGANYA - Instagram & TikTok Inspired Entertainment App
+# NGANYA - Entertainment Platform
 
-NGANYA is a modern Android application built with Kotlin and Jetpack Compose, inspired by Instagram and TikTok with a cool theme and engaging UI for entertainment.
+A modern Android entertainment application built with Kotlin and Jetpack Compose, featuring a social media feed, content discovery, and user profiles.
 
-## 📱 Features
+## 🎯 Project Overview
 
-- **Feed Screen** - Scroll through user posts and content
-- **Explore Screen** - Discover new and trending content
-- **Profile Screen** - View and manage user profile
-- **Bottom Navigation** - Easy navigation between tabs
-- **Material Design 3** - Modern UI components and theming
-- **Jetpack Compose** - Declarative UI framework
+NGANYA is an entertainment platform that brings users together through content sharing, discovery, and social interaction. Built with modern Android technologies for optimal performance and user experience.
 
-## 🛠️ Tech Stack
+## ✨ Features
 
-- **Language**: Kotlin
-- **UI Framework**: Jetpack Compose
-- **Design**: Material Design 3
-- **Minimum SDK**: API 24 (Android 7.0)
-- **Target SDK**: API 34
-- **Build System**: Gradle with Kotlin DSL
+### Core Features
+- 📱 **Bottom Navigation** - Easy access to Feed, Explore, and Profile sections
+- 🎬 **Content Feed** - Stream of posts from followed creators
+- 🔍 **Explore Section** - Discover trending and recommended content
+- 👤 **User Profiles** - View and manage user information
+- ❤️ **Like & Engagement** - Like and interact with posts
+- 💬 **Comments** - Comment on posts and engage with creators
 
-## 📋 Project Structure
+### UI/UX
+- Material Design 3 components
+- Dark/Light theme support
+- Smooth navigation transitions
+- Responsive layouts
+- Dynamic color system (Android 12+)
+
+## 🛠 Tech Stack
+
+### Architecture & Design Patterns
+- **Clean Architecture** with Repository Pattern
+- **Jetpack Compose** - Modern declarative UI framework
+- **Material Design 3** - Latest Material Design standards
+- **Kotlin** - Modern programming language for Android
+
+### Dependencies
+- Compose 1.5.4+
+- Material3 1.1.2+
+- Kotlin 1.9.0+
+- Android API 24+ (min) / API 34 (target)
+
+## 📦 Project Structure
 
 ```
-Nyanya/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── kotlin/com/nganya/app/
-│   │   │   │   ├── MainActivity.kt
-│   │   │   │   ├── NGANYAApp.kt
-│   │   │   │   └── ui/
-│   │   │   │       ├── theme/
-│   │   │   │       │   └── Theme.kt
-│   │   │   │       └── screens/
-│   │   │   │           ├── FeedScreen.kt
-│   │   │   │           ├── ExploreScreen.kt
-│   │   │   │           └── ProfileScreen.kt
-│   │   │   ├── res/
-│   │   │   └── AndroidManifest.xml
-│   │   ├── test/
-│   │   └── androidTest/
-│   ├── build.gradle.kts
-│   └── proguard-rules.pro
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
+app/src/main/
+├── kotlin/com/nganya/app/
+│   ├── data/
+│   │   ├── model/
+│   │   │   ├── User.kt
+│   │   │   └── Post.kt
+│   │   └── repository/
+│   │       ├── UserRepository.kt
+│   │       └── PostRepository.kt
+│   ├── ui/
+│   │   ├── screens/
+│   │   │   ├── FeedScreen.kt
+│   │   │   ├── ExploreScreen.kt
+│   │   │   └── ProfileScreen.kt
+│   │   └── theme/
+│   │       └── Theme.kt
+│   ├── MainActivity.kt
+│   └── NGANYAApp.kt
+└── AndroidManifest.xml
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-- Android Studio (latest version)
-- Android SDK Platform 34
-- Android SDK Build-Tools 34.x
-- Kotlin 1.9+
+- Android Studio Giraffe or later
+- Java Development Kit (JDK) 11+
+- Android SDK with API 34
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/illegalboyillegalpablo-cell/Nyanya.git
-   cd Nyanya
-   ```
+1. Clone the repository
+```bash
+git clone https://github.com/illegalboyillegalpablo-cell/Nyanya.git
+cd Nyanya
+```
 
-2. **Build the project**
-   ```bash
-   ./gradlew build
-   ```
+2. Open in Android Studio
+```bash
+# File > Open > Select project folder
+```
 
-3. **Run on emulator or device**
-   ```bash
-   ./gradlew installDebug
-   ```
+3. Sync Gradle dependencies
+```bash
+# Gradle will automatically sync when you open the project
+```
 
-4. **Launch the app**
-   ```bash
-   adb shell am start -n com.nganya.app/.MainActivity
-   ```
+4. Run the application
+```bash
+# Click Run > Run 'app' or press Shift + F10
+```
 
-## 📦 Dependencies
+## 📚 Documentation
 
-### Core Android
-- `androidx.core:core-ktx:1.12.0`
-- `androidx.appcompat:appcompat:1.6.1`
-- `com.google.android.material:material:1.11.0`
+- [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute to the project
+- [DEVELOPMENT.md](DEVELOPMENT.md) - Development setup and guidelines
+- [CHANGELOG.md](CHANGELOG.md) - Version history and roadmap
+- [LICENSE](LICENSE) - MIT License
 
-### Jetpack Compose
-- `androidx.compose.ui:ui:1.5.4`
-- `androidx.compose.material3:material3:1.1.2`
-- `androidx.activity:activity-compose:1.8.1`
-- `androidx.lifecycle:lifecycle-runtime-ktx:2.6.2`
+## 🎨 Theming
 
-### Testing
-- `junit:junit:4.13.2`
-- `androidx.test.ext:junit:1.1.5`
-- `androidx.test.espresso:espresso-core:3.5.1`
+NGANYA supports Material Design 3 with dynamic color support:
 
-## 🎨 UI Components
+### Light Theme
+- Primary: #6200EE (Purple)
+- Secondary: #03DAC6 (Teal)
+- Tertiary: #1F6DEF (Blue)
 
-### Screens Included
-1. **FeedScreen** - LazyColumn with feed cards for content display
-2. **ExploreScreen** - Discovery and trending content
-3. **ProfileScreen** - User profile management
+### Dark Theme
+- Primary: #BB86FC (Light Purple)
+- Secondary: #03DAC6 (Teal)
+- Tertiary: #03DAC6 (Teal)
 
-### Navigation
-- Bottom Navigation Bar with 3 tabs (Feed, Explore, Profile)
-- Material Design 3 components
-- Compose Scaffold for layout structure
+## 📱 Screen Overview
 
-## 🔧 Configuration
+### Feed Screen
+- Displays a list of posts from followed users
+- Lazy loading for optimal performance
+- Like and comment on posts
 
-### Gradle Build Config
-- **minSdk**: 24
-- **targetSdk**: 34
-- **compileSdk**: 34
-- **Kotlin Compiler Extension**: 1.5.0
+### Explore Screen
+- Discover trending content
+- Browse recommended creators
+- Search functionality
 
-### Permissions
-- `INTERNET` - Network requests
-- `CAMERA` - Photo/video capture
-- `RECORD_AUDIO` - Audio recording
-- `READ_EXTERNAL_STORAGE` - Access media
-- `WRITE_EXTERNAL_STORAGE` - Save media
+### Profile Screen
+- User profile information
+- Follower/Following statistics
+- Edit profile options
 
-## 📄 License
+## 🔐 Security & Privacy
 
-MIT License - See LICENSE file for details
+- Secure data handling
+- User privacy protection
+- Encrypted communication
+- GDPR compliant
+
+## 📊 Future Roadmap
+
+### Version 1.1.0 (Planned)
+- User authentication
+- Real-time notifications
+- Direct messaging
+- Story feature
+
+### Version 2.0.0 (Planned)
+- Video streaming
+- Live broadcasting
+- Payment integration
+- Advanced search
+- Hashtag support
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📝 License
+
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- **illegalboyillegalpablo-cell** - Project Owner and Lead Developer
 
 ## 📞 Support
 
-For issues and bug reports, please create an issue on GitHub:
-https://github.com/illegalboyillegalpablo-cell/Nyanya/issues
+For support, email illegalboyillegalpablo@gmail.com or open an issue on GitHub.
 
-## 👤 Author
+## 🙏 Acknowledgments
 
-**illegalboyillegalpablo-cell**
-- GitHub: [@illegalboyillegalpablo-cell](https://github.com/illegalboyillegalpablo-cell)
+- Android Development Community
+- Jetpack Compose Team
+- Material Design Team
+- All contributors and testers
 
 ---
 
-**Built with ❤️ for entertainment and creativity**
+**Made with ❤️ by the NGANYA Team**
